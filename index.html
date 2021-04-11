@@ -1,0 +1,878 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maladaptive Covert Narcissism Scale</title>
+<style type="text/css">
+.align_justify, .align_justify * {
+	text-align: justify;
+}
+
+#copyright-statement {
+	font-size: 0.85em;
+	text-align: justify;
+	font-style: italic;
+}
+
+@media only screen {
+
+	body {
+		margin: 1em;
+		padding: 0;
+	}
+
+	h1 {
+		text-align: center;
+		font-family: Arial, sans-serif;
+		font-size: 2.5em;
+		margin-bottom: 1.75em;
+	}
+
+	figure.mcns_internal,
+	input[type="radio"].mcns_input,
+	figure.print_only,
+	figure.mcns_internal:target ~ figure.mcns_default {
+		display: none;
+	}
+
+	figure.mcns_default,
+	figure.mcns_internal:target {
+		display: block;
+	}
+
+	figure.mcns_slide {
+		max-width: 50em;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		font-family: Arial, sans-serif;
+	}
+
+	figure.mcns_slide > figcaption {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.1em;
+		margin-bottom: 2em;
+	}
+
+	figure.mcns_slide h2 {
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	figure.mcns_slide > nav {
+		text-align: center;
+		margin-top: 4em;
+	}
+
+	figure.mcns_slide > nav a[href],
+	figure.mcns_slide > nav a[href]:link,
+	figure.mcns_slide > nav a[href]:visited,
+	figure.mcns_slide > nav a[href]:active {
+		display: inline-block;
+		background-color: #dddddd;
+		box-sizing: border-box;
+		border: 0.15em #666666 solid;
+		padding: 0.56em;
+		border-radius: 0.622em;
+		text-decoration: none;
+		color: #000000;
+		box-shadow: 0.311em 0.498em 0.56em #333333;
+		margin: 0 .249em;
+		font-size: 1em;
+		line-height: 1em;
+	}
+
+	figure.mcns_slide > nav a[href]:hover {
+		background-color: #bec9dd ;
+	}
+
+	figure.mcns_slide > nav a[href][data-label]::before {
+		content: attr(data-label);
+	}
+
+	figure.mcns_slide > div {
+		text-align: center;
+	}
+
+	figure.mcns_slide div.mcns_answer_box {
+		margin-top: 10em;
+	}
+
+	label.mcns_label {
+		display: inline-block;
+		visibility: hidden;
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 3em;
+		height: 1em;
+
+	}
+
+	label.mcns_label::before {
+		content: "";
+		visibility: visible;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		width: 3em;
+		box-sizing: border-box;
+		border: .15em #666666 solid;
+		background-color: #bec9dd;
+		border-radius: .622em .622em 0 0;
+		box-shadow: .311em .498em .56em #333333;
+		cursor: grab;
+	}
+
+	label.mcns_step_1::before {
+		height: 1.5em;
+	}
+
+	label.mcns_step_2::before {
+		height: 3em;
+	}
+
+	label.mcns_step_3::before {
+		height: 4.5em;
+	}
+
+	label.mcns_step_4::before {
+		height: 6em;
+	}
+
+	label.mcns_step_5::before {
+		height: 7.5em;
+		border-right: .15em #666666 solid;
+	}
+
+	input[type="radio"].mcns_input:not([value="2"]):checked ~ label.mcns_step_2::before,
+	input[type="radio"].mcns_input:not([value="3"]):checked ~ label.mcns_step_3::before,
+	input[type="radio"].mcns_input:not([value="4"]):checked ~ label.mcns_step_4::before,
+	input[type="radio"].mcns_input:not([value="5"]):checked ~ label.mcns_step_5::before {
+		background-color: #ffffff;
+	}
+
+	input[type="radio"].mcns_input[value="1"]:checked ~ label.mcns_step_1::before,
+	input[type="radio"].mcns_input[value="2"]:checked ~ label.mcns_step_2::before,
+	input[type="radio"].mcns_input[value="3"]:checked ~ label.mcns_step_3::before,
+	input[type="radio"].mcns_input[value="4"]:checked ~ label.mcns_step_4::before,
+	input[type="radio"].mcns_input[value="5"]:checked ~ label.mcns_step_5::before {
+		cursor: grabbing;
+	}
+
+	input[type="radio"].mcns_input[value="1"]:checked ~ label.mcns_step_1:hover::before,
+	input[type="radio"].mcns_input[value="2"]:checked ~ label.mcns_step_2:hover::before,
+	input[type="radio"].mcns_input[value="3"]:checked ~ label.mcns_step_3:hover::before,
+	input[type="radio"].mcns_input[value="4"]:checked ~ label.mcns_step_4:hover::before,
+	input[type="radio"].mcns_input[value="5"]:checked ~ label.mcns_step_5:hover::before {
+		border-color: #808080;
+	}
+
+	label.mcns_step_1:hover::before,
+	label.mcns_step_2:hover::before,
+	label.mcns_step_3:hover::before,
+	label.mcns_step_4:hover::before,
+	label.mcns_step_5:hover::before {
+		border-color: #009900;
+	}
+
+	label.mcns_step_1::after,
+	label.mcns_step_2::after,
+	label.mcns_step_3::after,
+	label.mcns_step_4::after,
+	label.mcns_step_5::after {
+		display: block;
+		position: absolute;
+		left: -8.125em;
+		right: 0;
+		text-align: center;
+		bottom: -3.281em;
+		width: 20em;
+		height: 1.875em;
+		font-size: .8em;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s 1s ease, opacity 1s ease;
+	}
+
+	label.mcns_step_1::after {
+		content: "Very uncharacteristic or untrue, strongly disagree";
+	}
+
+	label.mcns_step_2::after {
+		content: "Uncharacteristic";
+	}
+
+	label.mcns_step_3::after {
+		content: "Neutral";
+	}
+
+	label.mcns_step_4::after {
+		content: "Characteristic";
+	}
+
+	label.mcns_step_5::after {
+		content: "Very characteristic or true, strongly agree";
+	}
+
+	label.mcns_step_1:hover::after,
+	label.mcns_step_2:hover::after,
+	label.mcns_step_3:hover::after,
+	label.mcns_step_4:hover::after,
+	label.mcns_step_5:hover::after {
+		visibility: visible;
+		opacity: 1;
+		transition: opacity .75s .5s ease;
+	}
+
+	div.progress_bar {
+		position: relative;
+		top: 0;
+		left: 0;
+		background-color: #dddddd;
+		width: 100%;
+		border-radius: .622em;
+		margin: 1em 0;
+		overflow: hidden;
+	}
+
+	span.progress_fill {
+		display: block;
+		background-color: #bec9dd;
+		height: 1.5em;
+	}
+
+	span.progress_percent {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1.5em;
+		line-height: 1.5em;
+	}
+
+}
+
+
+@media only print {
+
+	input[type="radio"].mcns_input,
+	label.mcns_label,
+	figure.mcns_slide > nav a[href],
+	figure.mcns_default {
+		display: none;
+	}
+
+	figure.mcns_slide {
+		text-align: justify;
+		margin: 2em 0 0 0;
+		page-break-inside: avoid;
+	}
+
+	label.mcns_label {
+		margin-left: .5em;
+		border-bottom: .15em #000000 dashed;
+		padding: 0 .5em;
+		font-family: monospace;
+	}
+
+	figure.mcns_slide > figcaption,
+	figure.mcns_slide > div.mcns_answer_box,
+	input[type="radio"].mcns_input[value="1"]:checked ~ label.mcns_step_1,
+	input[type="radio"].mcns_input[value="2"]:checked ~ label.mcns_step_2,
+	input[type="radio"].mcns_input[value="3"]:checked ~ label.mcns_step_3,
+	input[type="radio"].mcns_input[value="4"]:checked ~ label.mcns_step_4,
+	input[type="radio"].mcns_input[value="5"]:checked ~ label.mcns_step_5 {
+		display: inline;
+	}
+
+	p.smallnote {
+		font-size: smaller;
+		display: block;
+		margin: 1em 2em;
+		
+	}
+
+	span.progress_percent {
+		border: .15em #666666 solid;
+		padding: .5em;
+	}
+
+	#mcns-results {
+		padding-top: 1em;
+	}
+
+	#mcns-results > figcaption {
+		display: block;
+		font-weight: bold;
+		margin: 0 0 2em 0;
+	}
+
+	#mcns-results-explanation {
+		margin-top: 1em;
+	}
+
+}
+</style>
+<script type="text/javascript">
+function update_mcns_results () {
+
+	var
+
+		nMinVal = 23, nModMin = 60, nHighMin = 82, nVHighMin = 97, nMaxVal = 115,
+
+		nResult =
+			parseInt(document.mcns_form.mcns_answer_1.value) +
+			parseInt(document.mcns_form.mcns_answer_2.value) +
+			parseInt(document.mcns_form.mcns_answer_3.value) +
+			parseInt(document.mcns_form.mcns_answer_4.value) +
+			parseInt(document.mcns_form.mcns_answer_5.value) +
+			parseInt(document.mcns_form.mcns_answer_6.value) +
+			parseInt(document.mcns_form.mcns_answer_7.value) +
+			parseInt(document.mcns_form.mcns_answer_8.value) +
+			parseInt(document.mcns_form.mcns_answer_9.value) +
+			parseInt(document.mcns_form.mcns_answer_10.value) +
+			parseInt(document.mcns_form.mcns_answer_11.value) +
+			parseInt(document.mcns_form.mcns_answer_12.value) +
+			parseInt(document.mcns_form.mcns_answer_13.value) +
+			parseInt(document.mcns_form.mcns_answer_14.value) +
+			parseInt(document.mcns_form.mcns_answer_15.value) +
+			parseInt(document.mcns_form.mcns_answer_16.value) +
+			parseInt(document.mcns_form.mcns_answer_17.value) +
+			parseInt(document.mcns_form.mcns_answer_18.value) +
+			parseInt(document.mcns_form.mcns_answer_19.value) +
+			parseInt(document.mcns_form.mcns_answer_20.value) +
+			parseInt(document.mcns_form.mcns_answer_21.value) +
+			parseInt(document.mcns_form.mcns_answer_22.value) +
+			parseInt(document.mcns_form.mcns_answer_23.value),
+
+		nPercent = Math.round(100 * (nResult - nMinVal) / (nMaxVal - nMinVal));
+
+	document.getElementById("mcns-result-display").innerHTML = nResult;
+	document.getElementById("mcns-progress-full").style.setProperty("width", nPercent + "%");
+	document.getElementById("mcns-percent-text").innerHTML = nPercent + "% (" + (nResult < nModMin ? "low" : nResult < nHighMin ? "moderate" : nResult < nVHighMin ? "high" : "very high" ) + ")";
+
+}
+
+window.onload = window.onhashchange = update_mcns_results;
+</script>
+</head>
+
+<body>
+
+<h1>The Maladaptive Covert Narcissism Scale</h1>
+
+<form name="mcns_form">
+
+	<figure class="mcns_slide print_only">
+		<p class="smallnote">
+			1 = very uncharacteristic or untrue, strongly disagree<br />
+			2 = uncharacteristic<br />
+			3 = neutral<br />
+			4 = characteristic<br />
+			5 = very characteristic or true, strongly agree
+		</p>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-1">
+		<figcaption>1. I can become entirely absorbed in thinking about my personal affairs, my health, my cares or my relations to others.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_1" id="mcns-option-1.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-1.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_1" id="mcns-option-1.2" class="mcns_input" value="2" />
+			<label for="mcns-option-1.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_1" id="mcns-option-1.3" class="mcns_input" value="3" />
+			<label for="mcns-option-1.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_1" id="mcns-option-1.4" class="mcns_input" value="4" />
+			<label for="mcns-option-1.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_1" id="mcns-option-1.5" class="mcns_input" value="5" />
+			<label for="mcns-option-1.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-about" rel="index prev" data-label="About the MCNS"></a>
+			<a href="#mcns-question-2" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-2">
+		<figcaption>2. My feelings are easily hurt by ridicule or by the slighting remarks of others.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_2" id="mcns-option-2.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-2.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_2" id="mcns-option-2.2" class="mcns_input" value="2" />
+			<label for="mcns-option-2.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_2" id="mcns-option-2.3" class="mcns_input" value="3" />
+			<label for="mcns-option-2.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_2" id="mcns-option-2.4" class="mcns_input" value="4" />
+			<label for="mcns-option-2.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_2" id="mcns-option-2.5" class="mcns_input" value="5" />
+			<label for="mcns-option-2.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-1" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-3" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-3">
+		<figcaption>3. When I enter a room I often become self-conscious and feel that the eyes of others are upon me.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_3" id="mcns-option-3.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-3.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_3" id="mcns-option-3.2" class="mcns_input" value="2" />
+			<label for="mcns-option-3.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_3" id="mcns-option-3.3" class="mcns_input" value="3" />
+			<label for="mcns-option-3.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_3" id="mcns-option-3.4" class="mcns_input" value="4" />
+			<label for="mcns-option-3.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_3" id="mcns-option-3.5" class="mcns_input" value="5" />
+			<label for="mcns-option-3.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-2" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-4" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-4">
+		<figcaption>4. I dislike sharing the credit of achievement with others.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_4" id="mcns-option-4.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-4.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_4" id="mcns-option-4.2" class="mcns_input" value="2" />
+			<label for="mcns-option-4.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_4" id="mcns-option-4.3" class="mcns_input" value="3" />
+			<label for="mcns-option-4.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_4" id="mcns-option-4.4" class="mcns_input" value="4" />
+			<label for="mcns-option-4.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_4" id="mcns-option-4.5" class="mcns_input" value="5" />
+			<label for="mcns-option-4.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-3" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-5" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-5">
+		<figcaption>5. I feel that I have enough on my hands without worrying about other people's troubles.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_5" id="mcns-option-5.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-5.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_5" id="mcns-option-5.2" class="mcns_input" value="2" />
+			<label for="mcns-option-5.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_5" id="mcns-option-5.3" class="mcns_input" value="3" />
+			<label for="mcns-option-5.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_5" id="mcns-option-5.4" class="mcns_input" value="4" />
+			<label for="mcns-option-5.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_5" id="mcns-option-5.5" class="mcns_input" value="5" />
+			<label for="mcns-option-5.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-4" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-6" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-6">
+		<figcaption>6. I feel that I am temperamentally different from most people.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_6" id="mcns-option-6.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-6.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_6" id="mcns-option-6.2" class="mcns_input" value="2" />
+			<label for="mcns-option-6.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_6" id="mcns-option-6.3" class="mcns_input" value="3" />
+			<label for="mcns-option-6.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_6" id="mcns-option-6.4" class="mcns_input" value="4" />
+			<label for="mcns-option-6.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_6" id="mcns-option-6.5" class="mcns_input" value="5" />
+			<label for="mcns-option-6.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-5" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-7" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-7">
+		<figcaption>7. I often interpret the remarks of others in a personal way.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_7" id="mcns-option-7.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-7.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_7" id="mcns-option-7.2" class="mcns_input" value="2" />
+			<label for="mcns-option-7.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_7" id="mcns-option-7.3" class="mcns_input" value="3" />
+			<label for="mcns-option-7.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_7" id="mcns-option-7.4" class="mcns_input" value="4" />
+			<label for="mcns-option-7.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_7" id="mcns-option-7.5" class="mcns_input" value="5" />
+			<label for="mcns-option-7.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-6" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-8" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-8">
+		<figcaption>8. I easily become wrapped up in my own interests and forget the existence of others.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_8" id="mcns-option-8.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-8.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_8" id="mcns-option-8.2" class="mcns_input" value="2" />
+			<label for="mcns-option-8.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_8" id="mcns-option-8.3" class="mcns_input" value="3" />
+			<label for="mcns-option-8.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_8" id="mcns-option-8.4" class="mcns_input" value="4" />
+			<label for="mcns-option-8.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_8" id="mcns-option-8.5" class="mcns_input" value="5" />
+			<label for="mcns-option-8.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-7" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-9" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-9">
+		<figcaption>9. I dislike being with a group unless I know that I am appreciated by at least one of those present.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_9" id="mcns-option-9.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-9.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_9" id="mcns-option-9.2" class="mcns_input" value="2" />
+			<label for="mcns-option-9.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_9" id="mcns-option-9.3" class="mcns_input" value="3" />
+			<label for="mcns-option-9.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_9" id="mcns-option-9.4" class="mcns_input" value="4" />
+			<label for="mcns-option-9.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_9" id="mcns-option-9.5" class="mcns_input" value="5" />
+			<label for="mcns-option-9.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-8" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-10" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-10">
+		<figcaption>10. I am secretly annoyed when other people come to me with their troubles, asking me for my sympathy.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_10" id="mcns-option-10.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-10.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_10" id="mcns-option-10.2" class="mcns_input" value="2" />
+			<label for="mcns-option-10.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_10" id="mcns-option-10.3" class="mcns_input" value="3" />
+			<label for="mcns-option-10.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_10" id="mcns-option-10.4" class="mcns_input" value="4" />
+			<label for="mcns-option-10.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_10" id="mcns-option-10.5" class="mcns_input" value="5" />
+			<label for="mcns-option-10.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-9" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-11" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-11">
+		<figcaption>11. I am jealous of good-looking people.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_11" id="mcns-option-11.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-11.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_11" id="mcns-option-11.2" class="mcns_input" value="2" />
+			<label for="mcns-option-11.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_11" id="mcns-option-11.3" class="mcns_input" value="3" />
+			<label for="mcns-option-11.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_11" id="mcns-option-11.4" class="mcns_input" value="4" />
+			<label for="mcns-option-11.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_11" id="mcns-option-11.5" class="mcns_input" value="5" />
+			<label for="mcns-option-11.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-10" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-12" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-12">
+		<figcaption>12. I tend to feel humiliated when criticized.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_12" id="mcns-option-12.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-12.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_12" id="mcns-option-12.2" class="mcns_input" value="2" />
+			<label for="mcns-option-12.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_12" id="mcns-option-12.3" class="mcns_input" value="3" />
+			<label for="mcns-option-12.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_12" id="mcns-option-12.4" class="mcns_input" value="4" />
+			<label for="mcns-option-12.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_12" id="mcns-option-12.5" class="mcns_input" value="5" />
+			<label for="mcns-option-12.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-11" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-13" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-13">
+		<figcaption>13. I wonder why other people aren't more appreciative of my good qualities.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_13" id="mcns-option-13.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-13.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_13" id="mcns-option-13.2" class="mcns_input" value="2" />
+			<label for="mcns-option-13.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_13" id="mcns-option-13.3" class="mcns_input" value="3" />
+			<label for="mcns-option-13.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_13" id="mcns-option-13.4" class="mcns_input" value="4" />
+			<label for="mcns-option-13.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_13" id="mcns-option-13.5" class="mcns_input" value="5" />
+			<label for="mcns-option-13.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-12" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-14" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-14">
+		<figcaption>14. I see other people as being either great or terrible.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_14" id="mcns-option-14.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-14.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_14" id="mcns-option-14.2" class="mcns_input" value="2" />
+			<label for="mcns-option-14.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_14" id="mcns-option-14.3" class="mcns_input" value="3" />
+			<label for="mcns-option-14.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_14" id="mcns-option-14.4" class="mcns_input" value="4" />
+			<label for="mcns-option-14.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_14" id="mcns-option-14.5" class="mcns_input" value="5" />
+			<label for="mcns-option-14.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-13" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-15" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-15">
+		<figcaption>15. I sometimes have fantasies about being violent without knowing why.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_15" id="mcns-option-15.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-15.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_15" id="mcns-option-15.2" class="mcns_input" value="2" />
+			<label for="mcns-option-15.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_15" id="mcns-option-15.3" class="mcns_input" value="3" />
+			<label for="mcns-option-15.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_15" id="mcns-option-15.4" class="mcns_input" value="4" />
+			<label for="mcns-option-15.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_15" id="mcns-option-15.5" class="mcns_input" value="5" />
+			<label for="mcns-option-15.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-14" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-16" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-16">
+		<figcaption>16. I am especially sensitive to success and failure.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_16" id="mcns-option-16.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-16.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_16" id="mcns-option-16.2" class="mcns_input" value="2" />
+			<label for="mcns-option-16.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_16" id="mcns-option-16.3" class="mcns_input" value="3" />
+			<label for="mcns-option-16.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_16" id="mcns-option-16.4" class="mcns_input" value="4" />
+			<label for="mcns-option-16.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_16" id="mcns-option-16.5" class="mcns_input" value="5" />
+			<label for="mcns-option-16.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-15" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-17" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-17">
+		<figcaption>17. I have problems that nobody else understands.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_17" id="mcns-option-17.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-17.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_17" id="mcns-option-17.2" class="mcns_input" value="2" />
+			<label for="mcns-option-17.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_17" id="mcns-option-17.3" class="mcns_input" value="3" />
+			<label for="mcns-option-17.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_17" id="mcns-option-17.4" class="mcns_input" value="4" />
+			<label for="mcns-option-17.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_17" id="mcns-option-17.5" class="mcns_input" value="5" />
+			<label for="mcns-option-17.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-16" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-18" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-18">
+		<figcaption>18. I try to avoid rejection at all costs.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_18" id="mcns-option-18.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-18.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_18" id="mcns-option-18.2" class="mcns_input" value="2" />
+			<label for="mcns-option-18.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_18" id="mcns-option-18.3" class="mcns_input" value="3" />
+			<label for="mcns-option-18.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_18" id="mcns-option-18.4" class="mcns_input" value="4" />
+			<label for="mcns-option-18.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_18" id="mcns-option-18.5" class="mcns_input" value="5" />
+			<label for="mcns-option-18.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-17" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-19" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-19">
+		<figcaption>19. My secret thoughts, feelings, and actions would horrify some of my friends.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_19" id="mcns-option-19.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-19.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_19" id="mcns-option-19.2" class="mcns_input" value="2" />
+			<label for="mcns-option-19.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_19" id="mcns-option-19.3" class="mcns_input" value="3" />
+			<label for="mcns-option-19.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_19" id="mcns-option-19.4" class="mcns_input" value="4" />
+			<label for="mcns-option-19.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_19" id="mcns-option-19.5" class="mcns_input" value="5" />
+			<label for="mcns-option-19.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-18" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-20" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-20">
+		<figcaption>20. I tend to become involved in relationships in which I alternately adore and despise the other person.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_20" id="mcns-option-20.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-20.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_20" id="mcns-option-20.2" class="mcns_input" value="2" />
+			<label for="mcns-option-20.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_20" id="mcns-option-20.3" class="mcns_input" value="3" />
+			<label for="mcns-option-20.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_20" id="mcns-option-20.4" class="mcns_input" value="4" />
+			<label for="mcns-option-20.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_20" id="mcns-option-20.5" class="mcns_input" value="5" />
+			<label for="mcns-option-20.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-19" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-21" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-21">
+		<figcaption>21. Even when I am in a group of friends, I often feel very alone and uneasy.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_21" id="mcns-option-21.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-21.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_21" id="mcns-option-21.2" class="mcns_input" value="2" />
+			<label for="mcns-option-21.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_21" id="mcns-option-21.3" class="mcns_input" value="3" />
+			<label for="mcns-option-21.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_21" id="mcns-option-21.4" class="mcns_input" value="4" />
+			<label for="mcns-option-21.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_21" id="mcns-option-21.5" class="mcns_input" value="5" />
+			<label for="mcns-option-21.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-20" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-22" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-22">
+		<figcaption>22. I resent others who have what I lack.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_22" id="mcns-option-22.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-22.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_22" id="mcns-option-22.2" class="mcns_input" value="2" />
+			<label for="mcns-option-22.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_22" id="mcns-option-22.3" class="mcns_input" value="3" />
+			<label for="mcns-option-22.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_22" id="mcns-option-22.4" class="mcns_input" value="4" />
+			<label for="mcns-option-22.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_22" id="mcns-option-22.5" class="mcns_input" value="5" />
+			<label for="mcns-option-22.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-21" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-23" rel="next" data-label="Next"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-question-23">
+		<figcaption>23. Defeat or disappointment usually shame or anger me, but I try not to show it.</figcaption>
+		<div class="mcns_answer_box">
+			<input type="radio" name="mcns_answer_23" id="mcns-option-23.1" class="mcns_input" checked value="1" />
+			<label for="mcns-option-23.1" class="mcns_label mcns_step_1">1</label>
+			<input type="radio" name="mcns_answer_23" id="mcns-option-23.2" class="mcns_input" value="2" />
+			<label for="mcns-option-23.2" class="mcns_label mcns_step_2">2</label>
+			<input type="radio" name="mcns_answer_23" id="mcns-option-23.3" class="mcns_input" value="3" />
+			<label for="mcns-option-23.3" class="mcns_label mcns_step_3">3</label>
+			<input type="radio" name="mcns_answer_23" id="mcns-option-23.4" class="mcns_input" value="4" />
+			<label for="mcns-option-23.4" class="mcns_label mcns_step_4">4</label>
+			<input type="radio" name="mcns_answer_23" id="mcns-option-23.5" class="mcns_input" value="5" />
+			<label for="mcns-option-23.5" class="mcns_label mcns_step_5">5</label>
+		</div>
+		<nav>
+			<a href="#mcns-question-22" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-results" rel="next last">See results</a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_internal" id="mcns-results">
+		<figcaption>Results</figcaption>
+		<div class="progress_bar">
+			<span class="progress_percent" id="mcns-percent-text">0% (low)</span>
+			<span class="progress_fill" id="mcns-progress-full" style="width: 0;"></span>
+		</div>
+		<div id="mcns-results-explanation">Absolute result is <span id="mcns-result-display">23</span>.</div>
+		<p class="smallnote align_justify">The absolute result can range from a minimum of 23 to a maximum of 115. Population average scores below 60 (low covert narcissism). Results above 60 (40%) indicate moderate covert narcissism, results above 82 (64%) indicate high covert narcissism, results above 97 (80%) indicate very high covert narcissism.</p>
+		<nav>
+			<a href="#mcns-question-23" rel="prev" data-label="Previous"></a>
+			<a href="#mcns-question-1" rel="first" data-label="Edit the answers"></a>
+			<a href="javascript:window.print();" data-label="&#128424; Print full report"></a>
+			<a href="#mcns-about" rel="index" data-label="About the MCNS"></a>
+		</nav>
+	</figure>
+
+	<figure class="mcns_slide mcns_default" id="mcns-about">
+		<figcaption>About the Maladaptive Covert Narcissism Scale</figcaption>
+		<div class="align_justify">
+			<p>The Maladaptive Covert Narcissism Scale (MCNS) offers a reliable self-report measure of covert narcissism distinct from other measures more focused on overt narcissism.</p>
+			<h2>Bibliografy</h2>
+			<ul>
+				<li>Cheek, J. M., Hendin, H. M., Wink., P. M. (2013). &ldquo;An extended version of the Hypersensitive Narcissism Scale&rdquo;. Association for Research in Personality.</li>
+				<li>Wink, P. (1992). &ldquo;Three narcissism scales for the California Q-set&rdquo;. <em>Journal of Personality Assessment</em>, 58, 51-66.</li>
+			</ul>
+		</div>
+		<div id="copyright-statement">This page is released under the terms of the GNU General Public License version 3 or (at your opinion) any later version. The source code is available on GitHub under <a href="https://github.com/much-less/mcns-test">much-less/mcns-test</a>.</div>
+		<nav>
+			<a href="#mcns-question-1" rel="first next" data-label="Start the test"></a>
+		</nav>
+	</figure>
+
+</form>
+
+</body>
+</html>
